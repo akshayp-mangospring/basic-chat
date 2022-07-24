@@ -1,0 +1,16 @@
+Socket.io works on Pub-Sub model.
+We can emit(Publish) events and listen(Subscribe) to those events, it works synchronously. First an event needs to be emitted and then we can subscribe to it and perform callback actions on it accordingly.
+We can send data when we emit events, but Socket.io is Bidirectional which helps us to send data back as well.
+So the data flow is thus bidirectional.
+
+We need to install Socket.io on both the front and the back.
+For Server: socket.io
+For Client: socket.io-client
+
+In the client we need to provide the server to which we are going to send events to.
+In the server we need to provide the client from which we are going to receive the events from.
+
+We can even broadcast messages to every connected client from the server. Broadcasting can be done only via Server.
+The flow of messages is like this:
+Client => Server
+Server => Every client
